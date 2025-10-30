@@ -5,113 +5,218 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Quiz de lógica para desafiar sua mente e melhorar as suas habilidades de raciocínio.">
     <title>Quiz  de lógica!</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- tsParticles -->
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.11.1/tsparticles.bundle.min.js"></script>
 </head>
 <body>
+    <div id="tsparticles"></div>
     <header>
-        <h1>Quiz de lógica!</h1>
-        <p>Desafie sua mente e melhore suas habilidades de raciocínio com este quiz de lógica.</p>
-        <p>Responda às perguntas e veja como você se sai!</p>
+        <h1 class="titulo">Quiz de lógica!</h1>
+        <p class="subtitulo">Desafie sua mente e melhore suas habilidades de raciocínio com este quiz de lógica.</p>
+        <p class="subtitulo">Responda às perguntas e veja como você se sai!</p>
     </header>
     <main> 
         <!--- Intrdodução/chamada de ação!-->
+        <section id="introducao">
+            <h2 class="introducao">Vamos começar!</h2>
+        </section>
         <section>
-            <h2>Vamos começar!</h2>
-            <p>Será que você vai acertar todas as perguntas??</p>
+            <p class="sub-introducao">Será que você vai acertar todas as perguntas??</p>
         </section>
         <!--- Pergunta 1 --->
-        <section>
+        <section class="pergunta ativa">
             <h2>Pergunta 1: O pato e o ovo!</h2>
             <p>Um pato bota um ovo exatamente na divisa entre o Brasil e a Argentina. De quem é o ovo?</p>
-            <img src="PatoEOvo.png" alt="Pato e Ovo" style="width:300px;height:200px;"> 
             <form>
-                <input type="radio" id="brasil" name="pergunta1" value="brasil">
-                <label for="brasil">Brasil.</label><br>
-                <input type="radio" id="argentina" name="pergunta1" value="argentina">
-                <label for="argentina">Argentina.</label><br>
-                <input type="radio" id="paraguai" name="pergunta1" value="paraguai">
-                <label for="paraguai">Paraguai.</label><br>
-                <input type="radio" id="nenhum" name="pergunta1" value="nenhum">
-                <label for="nenhum">Nenhum deles.</label>
+                <div class="pergunta-layout">
+                    <div class="opcoes">
+                        <label>
+                            <input type="radio" id="brasil" name="pergunta1" value="brasil">
+                            <span>Brasil.</span>
+                        </label>
+                        <label>
+                            <input type="radio" id="argentina" name="pergunta1" value="argentina">
+                        <span>Argentina.</span>
+                        </label>
+                        
+                        <label>
+                        <input type="radio" id="paraguai" name="pergunta1" value="paraguai">
+                        <span>Paraguai.</span>
+                        </label>
+
+                        <label>
+                        <input type="radio" id="nenhum" name="pergunta1" value="nenhum">
+                        <span>Nenhum deles.</span>
+                    </div>
+
+                        <div class="imagem-pato">
+                            <img src="PatoEOvo.png" alt="Pato e Ovo" style="width:210px; height: 170px;">
+                        </div>
+                    </div>
+                    <div class="botao-centro">
+                        <button class="proximo" type="button">Próximo</button>
+                    </div>
+            </form>
         </section><br>
+        
         <!--- Pergunta 2 -->
-        <section>
+        <section class="pergunta">
             <h2>Pergunta 2: O relógio quebrado!</h2>
             <p>Um relógio quebrou e parou às 12h25. Quantas vezes por dia ele mostra a hora certa?</p>
-            <img src="RelogioQuebrado.png" alt="Relógio Quebrado" style="width:300px;height:200px;"><br>
             <form>
-                <input type="radio" id="uma" name="pergunta2" value="uma">
-                <label for="uma">Uma vez.</label><br>
-                <input type="radio" id="duas" name="pergunta2" value="duas">
-                <label for="duas">Duas vezes.</label><br>
-                <input type="radio" id="tres" name="pergunta2" value="tres">
-                <label for="tres">Três vezes.</label><br>
-                <input type="radio" id="nenhuma" name="pergunta2" value="nenhuma">
-                <label for="nenhuma">Nenhuma vez.</label>
+                <div class="pergunta-layout">
+                    <div class="opcoes">
+                        <label>
+                            <input type="radio" id="uma" name="pergunta2" value="uma">
+                            <span>Uma vez.</span>
+                        </label>
+                        <label>
+                            <input type="radio" id="duas" name="pergunta2" value="duas">
+                            <span>Duas vezes.</span>
+                        </label>
+                        <label>
+                            <input type="radio" id="tres" name="pergunta2" value="tres">
+                            <span>Três vezes.</span>
+                        </label>
+                        <label>
+                            <input type="radio" id="nenhuma" name="pergunta2" value="nenhuma">
+                            <span>Nenhuma vez.</span>
+                        </label>
+                    </div>
+                    <div class="imagem-relogio">
+                        <img src="RelogioQuebrado.png" alt="Relógio Quebrado" style="width:180px; height:200px;">
+                    </div>
+                </div>
+                <button class="proximo" type="button">Próximo</button>
             </form>
         </section>
         <!--- Pergunta 3 -->
-        <section>
+        <section class="pergunta">
             <h2>Pergunta 3: A família de estranhos!</h2>
             <p> Um pai tem 4 filhos. Três se chama Norte, sul, e Oeste. Qual, é o nome do quarto filho?</p>
-            <img src="FamiliaEstranha.png" alt="Família de Estranhos" style="width:300px;height:200px;"><br>
             <form>
-                <input type="radio" id="leste" name="pergunta3" value="leste">
-                <label for="leste">Leste.</label><br>
-                <input type="radio" id="Nilo" name="pergunta3" value="Nilo">
-                <label for="Nilo">Nilo.</label><br>
-                <input type="radio" id="Marcos" name="pergunta3" value="Marcos">
-                <label for="Marcos">Marcos.</label><br>
-                <input type="radio" id="Qual" name="pergunta3" value="Qual">
-                <label for="Qual">Qual.</label><br>
+                <div class="pergunta-layout">
+                    <div class="opcoes">
+                        <label>
+                            <input type="radio" id="leste" name="pergunta3" value="leste">
+                            <span>Leste.</span>
+                        </label>
+                        <label>
+                            <input type="radio" id="Nilo" name="pergunta3" value="Nilo">
+                            <span>Nilo.</span>
+                        </label>
+                        <label>
+                            <input type="radio" id="Marcos" name="pergunta3" value="Marcos">
+                            <span>Marcos.</span>
+                        </label>
+                        <label>
+                            <input type="radio" id="Qual" name="pergunta3" value="Qual">
+                            <span>Qual.</span>
+                        </label>
+                    </div>
+                    <div class="imagem-familia">
+                        <img src="FamiliaEstranha.png" alt="Familia Estranha" style="width:180px; height:200px;">
+                    </div>
+                </div>
+                <button class="proximo" type="button">Próximo</button>
+            </form>
         </section>
         <!--- Pergunta 4 -->
-        <section>
+        <section class="pergunta">
             <h2>Pergunta 4: A compra e o troco!</h2>
             <p>Um chocolate custa R$1. Você dá R$2 e recebe R$1 de troco. Quanto você recebe de troco?</p>
-            <img src="Dinheiro.png" alt="Dinheiro" style="width:300px;height:200px;"><br>
             <form>
-                <input type="radio" id="umReal" name="pergunta4" value="umReal">
-                <label for="umReal">R$1.</label><br>
-                <input type="radio" id="doisReais" name="pergunta4" value="doisReais">
-                <label for="doisReais">R$2.</label><br>
-                <input type="radio" id="tresReais" name="pergunta4" value="tresReais">
-                <label for="tresReais">R$3.</label><br>
-                <input type="radio" id="quatroReais" name="pergunta4" value="quatroReais">
-                <label for="quatroReais">R$4.</label><br>
+                <div class="pergunta-layout">
+                    <div class="opcoes">
+                        <label>
+                            <input type="radio" id="umReal" name="pergunta4" value="umReal">
+                            <span>R$1,00.</span>
+                        </label>
+                        <label>
+                            <input type="radio" id="doisReais" name="pergunta4" value="doisReais">
+                            <span>R$2,00.</span>
+                        </label>
+                        <label>
+                            <input type="radio" id="tresReais" name="pergunta4" value="tresReais">
+                            <span>R$3,00.</span>
+                        </label>
+                        <label>
+                            <input type="radio" id="quatroReais" name="pergunta4" value="quatroReais">
+                            <span>R$4,00.</span>
+                        </label>
+                    </div>
+                    <div class="imagem-dinheiro">
+                        <img src="Dinheiro.png" alt="Dinheiro" style="width: 250px; height: 200px;">
+                    </div>
+                </div>
+                <button class="proximo" type="button">Próximo</button>
+            </form>
         </section>
         <!--- Pergunta 5 -->
-        <section>
+        <section class="pergunta">
             <h2>Pergunta 5: A escada submersa!</h2>
             <p>Uma escada tem 10 degraus, e está parcialmente submersa em um tanque que esta enchendo. Se a água sobe 1 degrau por hora e a maré também sobe 1 degrau por hora, em quantas horas a escada ficará totalmentesubmersa?</p>
-            <img src="Escada.png" style="width:300px;height:200px;"><br>
             <form>
-                <input type="radio" id="umaHora" name="pergunta5" value="umaHora">
-                <label for="umaHora">1 hora.</label><br>
-                <input type="radio" id="duasHoras" name="pergunta5" value="duasHoras">
-                <label for="duasHoras">2 horas.</label><br>
-                <input type="radio" id="tresHoras" name="pergunta5" value="tresHoras">
-                <label for="tresHoras">3 horas.</label><br>
-                <input type="radio" id="nenhumaHora" name="pergunta5" value="nenhumaHora">
-                <label for="nenhumaHora">Nenhuma hora.</label><br>
+                <div class="pergunta-layout">
+                    <div class="opcoes">
+                        <label>
+                            <input type="radio" id="umaHora" name="pergunta5" value="umaHora">
+                            <span>1 Hora.</span>
+                        </label>
+                        <label>
+                            <input type="radio" id="duasHoras" name="pergunta5" value="duasHoras">
+                            <span>2 Horas.</span>
+                        </label>
+                        <label>
+                            <input type="radio" id="tresHoras" name="pergunta5" value="tresHoras">
+                            <span>3 Horas.</span>
+                        </label>
+                        <label>
+                            <input type="radio" id="nenhumaHora" name="pergunta5" value="nenhumaHora">
+                            <span>Nenhuma hora.</span>
+                        </label>
+                    </div>
+                    <div class="imagem-escada">
+                        <img src="Escada.png" alt="Escada" style="width:300px;height:200px;">
+                    </div>
+                </div>
+                <button class="proximo" type="button">Próximo</button>
+            </form>
         </section>
         <!--- Pergunta 6 -->
-        <section>
+        <section class="pergunta">
             <h2>Pergunta 6: O balde furado!</h2>
             <p>Um balde cheio de água tem um furo que vaza 1 litro de água por hora. Se o balde tem capacidade para 10 litros, em quantas horas ele ficará vazio?</p>
-            <img src="BaldeFurado.png" alt="Balde Furado" style="width:300px;height:200px;"><br>
             <form>
-                <input type="radio" id="dezHoras" name="pergunta6" value="dezHoras">
-                <label for="dezHoras">10 horas.</label><br>
-                <input type="radio" id="cincoHoras" name="pergunta6" value="cincoHoras">
-                <label for="cincoHoras">5 horas.</label><br>
-                <input type="radio" id="duasHoras" name="pergunta6" value="duasHoras">
-                <label for="duasHoras">2 horas.</label><br>
-                <input type="radio" id="nenhumaHora2" name="pergunta6" value="nenhumaHora2">
-                <label for="nenhumaHora2">Nenhuma hora.</label><br>
+                <div class="pergunta-layout">
+                    <div class="opcoes">
+                        <label>
+                            <input type="radio" id="dezHoras" name="pergunta6" value="dezHoras">
+                            <span>10 Horas.</span>
+                        </label>
+                        <label>
+                            <input type="radio" id="cincoHoras" name="pergunta6" value="cincoHoras">
+                            <span>5 Horas.</span>
+                        </label>
+                        <label>
+                            <input type="radio" id="duasHoras" name="pergunta6" value="duasHoras">
+                            <span>2 Horas.</span>
+                        </label>
+                        <label>
+                            <input type="radio" id="nenhumaHora2" name="pergunta6" value="nenhumaHora2">
+                            <span>Nenhuma hora.</span>
+                        </label>
+                    </div>
+                    <div class="imagem-balde">
+                        <img src="BaldeFurado.png" alt="Balde Furado" style="width:300px;height:200px;">
+                    </div>
+                </div>
+                <button class="proximo" type="button">Próximo</button>
             </form>
         </section>
         <!--- Pergunta 7 -->
-        <section>
+        <section class="pergunta">
             <h2>Pergunta 7: O número que falta! </h2>
             <p>Complete a sequência:<br>
                 1 ➡️ 2 <br>
@@ -119,64 +224,140 @@
                 3 ➡️ 6 <br>
                 4 ➡️ 8 <br>
                 5 ➡️ ? <br></p>
-                <img src="NumeroQueFalta.png" alt="Número que Falta" style="width:300px;height:200px;"><br>
             <form>
-                <input type="radio" id="dez" name="pergunta7" value="dez">
-                <label for="dez">10.</label><br>
-                <input type="radio" id="dois" name="pergunta7" value="dois">
-                <label for="dois">2.</label><br>
-                <input type="radio" id="seis" name="pergunta7" value="seis">
-                <label for="seis">6.</label><br>
-                <input type="radio" id="quinze" name="pergunta7" value="quinze">
-                <label for="quinze">15.</label><br>
+                <div class="pergunta-layout">
+                    <div class="opcoes">
+                        <label>
+                            <input type="radio" id="dez" name="pergunta7" value="dez">
+                            <span>10.</span>
+                        </label>
+                        <label>
+                            <input type="radio" id="dois" name="pergunta7" value="dois">
+                            <span>2.</span>
+                        </label>
+                        <label>
+                            <input type="radio" id="seis" name="pergunta7" value="seis">
+                            <span>6.</span>
+                        </label>
+                        <label>
+                            <input type="radio" id="quinze" name="pergunta7" value="quinze">
+                            <span>15.</span>
+                        </label>
+                    </div>
+                    <div class="imagem-numero-que-falta">
+                        <img src="NumeroQueFalta.png" alt="Número que Falta" style="width:300px;height:200px;">
+                    </div>
+                </div>
+                <button class="proximo" type="button">Próximo</button>
+            </form>
         </section>
         <!--- Pergunta 8 -->
-        <section>
+        <section class="pergunta">
             <h2>Pergunta 8: O que é?</h2>
             <p>Eu tenho cidades, mas não casas. Tenho motanhas, mas não árvores. Tenho água, mas não peixes. O que sou?</p>
-            <img src="Interrogação.png" alt="Interrogação" style="width:300px;height:200px;"><br>
             <form>
-                <input type="radio" id="mapa" name="pergunta8" value="mapa">
-                <label for="mapa">Mapa.</label><br>
-                <input type="radio" id="Ar" name="pergunta8" value="Ar">
-                <label for="Ar">Ar.</label><br>
-                <input type="radio" id="Água" name="pergunta8" value="Água">
-                <label for="Água">Água.</label><br>
-                <input type="radio" id="Tudo" name="pergunta8" value="Tudo">
-                <label for="Tudo">Tudo.</label><br>
+                <div class="pergunta-layout">
+                    <div class="opcoes">
+                        <label>
+                            <input type="radio" id="mapa" name="pergunta8" value="mapa">
+                            <span>Mapa.</span>
+                        </label>
+                        <label>
+                            <input type="radio" id="Ar" name="pergunta8" value="Ar">
+                            <span>Ar.</span>
+                        </label>
+                        <label>
+                            <input type="radio" id="Água" name="pergunta8" value="Água">
+                            <span>Água.</span>
+                        </label>
+                        <label>
+                            <input type="radio" id="Tudo" name="pergunta8" value="Tudo">
+                            <span>Tudo que existe.</span>
+                        </label>
+                    </div>
+                    <div class="imagem-interrogacao">
+                        <img src="Interrogação.png" alt="Interrogação" style="width:300px;height:200px;">
+                    </div>
+                </div>
+                <button class="proximo" type="button">Próximo</button>
+            </form>
         </section>
         <!--- Pergunta 9 -->
-        <section>
+        <section class="pergunta">
             <h2>Pergunta 9: O que é?</h2>
             <p>Eu sou leve como uma pena, mas mesmo o homem mais forte não consegue segurar por muito tempo. O que sou?</p>
-            <img src="Pena.png" alt="Pena" style="width:300px;height:200px;"><br>
             <form>
-                <input type="radio" id="ar" name="pergunta9" value="ar">
-                <label for="ar">Ar.</label><br>
-                <input type="radio" id="sopro" name="pergunta9" value="sopro">
-                <label for="sopro">Sopro.</label><br>
-                <input type="radio" id="pena" name="pergunta9" value="pena">
-                <label for="pena">Pena.</label><br>
-                <input type="radio" id="nada" name="pergunta9" value="nada">
-                <label for="nada">Nada.</label><br>
+                <div class="pergunta-layout">
+                    <div class="opcoes">
+                        <label>
+                            <input type="radio" id="ar" name="pergunta9" value="ar">
+                            <span>Ar.</span>
+                        </label>
+                        <label>
+                            <input type="radio" id="sopro" name="pergunta9" value="sopro">
+                            <span>Sopro.</span>
+                        </label>
+                        <label>
+                            <input type="radio" id="pena" name="pergunta9" value="pena">
+                            <span>Pena.</span>
+                        </label>
+                        <label>
+                            <input type="radio" id="nada" name="pergunta9" value="nada">
+                            <span>Nada.</span>
+                        </label>
+                    </div>
+                    <div class="imagem-pena">
+                        <img src="Pena.png" alt="Pena" style="width:300px;height:200px;">
+                    </div>
+                </div>
+                <button class="proximo" type="button">Próximo</button>
+            </form>
         </section>
         <!--- Pergunta 10 -->
-        <section>
+        <section class="pergunta">
             <h2>Pergunta 10: O que é?</h2>
             <p>Eu falo sem boca e ouço sem ouvidos. Não tenho corpo, mas eu sempre estou presente. O que sou?</p>
-            <img src="Som.png" alt="Som" style="width:300px;height:200px;"><br>
             <form>
-                <input type="radio" id="som" name="pergunta10" value="som">
-                <label for="som">Som.</label><br>
-                <input type="radio" id="eco" name="pergunta10" value="eco">
-                <label for="eco">Eco.</label><br>
-                <input type="radio" id="silencio" name="pergunta10" value="silencio">
-                <label for="silencio">Silêncio.</label><br>
-                <input type="radio" id="nada2" name="pergunta10" value="nada2">
-                <label for="nada2">Nada.</label><br>
+                <div class="pergunta-layout">
+                    <div class="opcoes">
+                        <label>
+                            <input type="radio" id="som" name="pergunta10" value="som">
+                            <span>Som.</span>
+                        </label>
+                        <label>
+                            <input type="radio" id="eco" name="pergunta10" value="eco">
+                            <span>Eco.</span>
+                        </label>
+                        <label>
+                            <input type="radio" id="silencio" name="pergunta10" value="silencio">
+                            <span>Silêncio.</span>
+                        </label>
+                        <label>
+                            <input type="radio" id="nada2" name="pergunta10" value="nada2">
+                            <span>Nada.</span>
+                        </label>
+                    </div>
+                    <div class="imagem-som">
+                        <img src="Som.png" alt="Som" style="width:300px;height:200px;">
+                    </div>
+                </div>
+                <button class="proximo" type="button">Finalizar</button>
+            </form>
+        </section>
+        <!--Resultado do quiz-->
+        <section>
+            <div id="resultado" style="display: none;">
+                    <h2>Resultado final!</h2>
+
+                    <div id="pontuacao"></div>
+
+                    <table id="tabela"></table>
+
+                    <div id="feedback"></div>
+                </div>
         </section>
         <!--- Tabela de pontuação--->
-        <section>
+        <section id="estatica-pontuacao">
             <h2>Tabela de pontuação!</h2>
             <table border="1">
             <thead>
@@ -208,7 +389,7 @@
             </table>
         </section>
         <!---Tabela Respostas!-->
-        <section>
+        <section id="gabarito">
             <h2>Verifique aqui as sua respostas!</h2>
             <details> 
                 <summary>Clique aqui para visualizar as repostas corretas!</summary>           
@@ -227,7 +408,7 @@
             </details>
         </section>
         <!--- Formulario de feedback --->
-        <section>
+        <section id="feedback-form">
             <h2>Deixe seu feedback!</h2>
             <!-- <form action="https://example.com/feedback" method="post">
                 <label for="nome">Nome:</label><br>
@@ -242,7 +423,7 @@
                 <fieldset>
                     <legend>Formulário de Feedback</legend>
                     <label for="nome">Nome:</label><br>
-                    <input type="text" id="nome" name="nome" placeholder="Nome:"><br>
+                    <input type="text" id="nome" name="nome" placeholder="Nome"><br>
                     <label for="email">Email:</label><br>
                     <input type="email" id="email" name="email" placeholder="Email"><br>
                     <label for="comentario">Comentários:</label><br>
@@ -253,10 +434,11 @@
         </section>
     </main>
     <footer>
-        <p>&copy; 2025 Quiz de Lógica. Todos os direitos reservados.</p>
-        <p>Desenvolvido por Miriam L.</p>
-        <p>Entre em contato: @Heymiah18 <a href="https://www.instagram.com/heymiah18/" target="_blank">Instagram</a></p>
-        <p>Este site é apenas para fins educacionais e de entretenimento.</p>
+        <p class="rodape">&copy; 2025 Quiz de Lógica. Todos os direitos reservados.</p>
+        <p class="rodape">Desenvolvido por Miriam L.</p>
+        <p class="rodape">Entre em contato: @Heymiah18 <a href="https://www.instagram.com/heymiah18/" target="_blank">Instagram</a></p>
+        <p class="rodape">Este site é apenas para fins educacionais e de entretenimento.</p>
     </footer>
+    <script src="script.js"></script>
 </body>
 </html>
